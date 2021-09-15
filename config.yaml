@@ -1,4 +1,4 @@
-baseURL: https://jiayingchen-portfolio.netlify.app
+baseURL: https://jiayingchen-portfolio.netlify.app/
 languageCode: en-us
 title: Portfolio website for Jiaying Chen
 theme: forty
@@ -12,7 +12,7 @@ params:
       AND RELEASED UNDER THE CREATIVE COMMONS.
     title: Hi, my name is Jiaying Chen
   blog: {}
-  contact:07422597620
+  contact:
     address:
       - city: London
         country: United Kingdom
