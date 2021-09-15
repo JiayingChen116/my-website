@@ -56,7 +56,7 @@ params:
       - icon: fa-linkedin
         label: LinkedIn
         url: https://www.linkedin.com/in/jiaying-chen-0934/
-  image: PKU-back.jpg
+  image: PKU-back.jpeg
   name: Jiaying Chen
   navigation:
     button1:
@@ -80,7 +80,7 @@ params:
   tiles:
     enable: yes
     showcase:
-      - image: PKU-back.jpg
+      - image: PKU-back.jpeg
         subtitle: Ipsum Dolor Sit Amet
         title: Biology
         url: blogs/aliquam
