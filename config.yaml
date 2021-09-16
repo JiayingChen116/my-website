@@ -81,8 +81,8 @@ params:
     enable: yes
     showcase:
       - image: me.jpeg
-        subtitle: Ipsum Dolor Sit Amet
-        title: Biology
+        subtitle: Learn more about who I am.
+        title: Biography
         url: blogs/aliquam
       - image: purple.jpeg
         subtitle: Feugiat Amet Tempus
