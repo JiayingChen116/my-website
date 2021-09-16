@@ -70,8 +70,8 @@ params:
         url: '#'
       - name: My biography
         url: blogs/aliquam
-      - name: My projects
-         url: blogs/tempus
+      # - name: My projects
+      #    url: blogs/tempus
       - name: My resume
        #  url:https://www.dropbox.com/s/jicqvfs4930wodf/CV_AmyChen.pdf?dl=0     
         url: elements.html
