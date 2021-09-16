@@ -68,12 +68,13 @@ params:
     links:
       - name: Home
         url: '#'
-      - name: My projects
-        url: blogs
-      # - name: Generic Blog
-      #   url: blogs/ipsum
-      # - name: Elements
-      #   url: elements.html
+      - name: My biography
+        url: blogs/aliquam
+       - name: My projects
+         url: blogs
+       - name: My resume
+         url:https://www.dropbox.com/s/jicqvfs4930wodf/CV_AmyChen.pdf?dl=0     
+       #   url: elements.html
     menu: Menu
     subtitle: By HTML5 Up
     title: Forty
