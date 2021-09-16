@@ -9,7 +9,7 @@ params:
     buttonText: Get Started
     subtitle: |-
       Welcome to Amy's portfolio website! Get to know me better .
-    title: Hi, my name is Jiaying (Amy) Chen
+    title: Hi, my name is Jiaying (Amy) Chen. Nice to meet you!
   blog: {}
   contact:
     address:
@@ -62,18 +62,18 @@ params:
     button1:
       - name: Get Started
         url: blogs
-    button2:
-      - name: Log In
-        url: '#'
+    # button2:
+    #   - name: Log In
+    #     url: '#'
     links:
       - name: Home
         url: '#'
-      - name: Blogs
+      - name: My projects
         url: blogs
-      - name: Generic Blog
-        url: blogs/ipsum
-      - name: Elements
-        url: elements.html
+      # - name: Generic Blog
+      #   url: blogs/ipsum
+      # - name: Elements
+      #   url: elements.html
     menu: Menu
     subtitle: By HTML5 Up
     title: Forty
