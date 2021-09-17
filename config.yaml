@@ -81,13 +81,13 @@ params:
   tiles:
     enable: yes
     showcase:
-      - image: me.jpeg
+      - image: me2.jpeg
         subtitle: Learn more about who I am.
         title: Biography
         url: blogs/aliquam
       - image: purple.jpeg
-        subtitle: Feugiat Amet Tempus
-        title: Tempus
+        subtitle: My very first project in R!
+        title: Pre-programme Assignment of MAM2022
         url: blogs/tempus
       - image: movieback.JPG
         subtitle: Lorem Etiam Nullam
