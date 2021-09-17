@@ -10,4 +10,4 @@ keywords: ""
 slug: resume
 title: My resume
 ---
-
+ Hi, feel free to take a look at my resume to learn more about my past working and research experience.

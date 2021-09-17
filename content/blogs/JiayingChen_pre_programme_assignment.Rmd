@@ -8,7 +8,7 @@ description: Nullam et orci eu lorem consequat tincidunt vivamus et sagittis mag
   sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem
   consequat tincidunt. Vivamus et sagittis tempus.
 draft: false
-image: pic07.jpg
+image: ""
 keywords: ""
 slug: tempus
 title: Tempus
@@ -20,17 +20,6 @@ library(gapminder)  # gapminder dataset
 library(here)
 library(janitor)
 ```
-
-
-## Short biography of Jiaying Chen
-Hi, I am **Jiaying Chen**. I am from *Shanghai, China*. I graduated from the School of Economics of *Peking University*,majoring in Finance. I would use three keywords to describe my characteristic:
--   Curious
--   Reliable
--   Compassionate
-And here is my [Linkedin profile](https://www.linkedin.com/in/jiaying-chen-0934) where you can find more information about my past experience.
-In my spare time, I am fond of arts. And my favorite artist is Bato Dugarzhapov. Here is one of his works.
-![Image caption](https://i.pinimg.com/originals/ae/a0/52/aea0528570933ed52efd390cb9836134.jpg)
-
 
 # Task 2: `gapminder` country comparison
 

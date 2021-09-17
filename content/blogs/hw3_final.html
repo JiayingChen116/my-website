@@ -5,7 +5,7 @@ categories:
 date: "2017-10-31T21:28:43-05:00"
 description: ""
 draft: false
-image: pic10.jpg
+image: ""
 keywords: ""
 slug: ipsum
 title: Homework 3 for Applied Statistics 
@@ -440,16 +440,16 @@ null_dist</code></pre>
 ## # A tibble: 1,000 × 2
 ##    replicate    stat
 ##        &lt;int&gt;   &lt;dbl&gt;
-##  1         1  0.329 
-##  2         2  0.0611
-##  3         3 -0.188 
-##  4         4 -0.248 
-##  5         5 -0.329 
-##  6         6 -0.0894
-##  7         7  0.111 
-##  8         8 -0.0987
-##  9         9 -0.244 
-## 10        10  0.249 
+##  1         1 -0.0314
+##  2         2 -0.315 
+##  3         3 -0.0425
+##  4         4  0.272 
+##  5         5  0.119 
+##  6         6  0.640 
+##  7         7  0.0389
+##  8         8 -0.289 
+##  9         9 -0.0289
+## 10        10  0.218 
 ## # … with 990 more rows</code></pre>
 <p>Here, <code>hypothesize</code> is used to set the null hypothesis as a test for independence, i.e., that there is no difference between the two population means. In one sample cases, the null argument can be set to <em>point</em> to test a hypothesis relative to a point estimate.</p>
 <p>Also, note that the <code>type</code> argument within generate is set to permute, which is the argument when generating a null distribution for a hypothesis test.</p>
@@ -575,18 +575,18 @@ null_dist1</code></pre>
 ## Explanatory: director (factor)
 ## Null Hypothesis: independence
 ## # A tibble: 1,000 × 2
-##    replicate     stat
-##        &lt;int&gt;    &lt;dbl&gt;
-##  1         1  0.0386 
-##  2         2  0.155  
-##  3         3 -0.269  
-##  4         4 -0.0992 
-##  5         5 -0.322  
-##  6         6  0.113  
-##  7         7 -0.0462 
-##  8         8  0.102  
-##  9         9 -0.00380
-## 10        10  0.272  
+##    replicate    stat
+##        &lt;int&gt;   &lt;dbl&gt;
+##  1         1 -0.248 
+##  2         2  0.0386
+##  3         3  0.0704
+##  4         4  0.0174
+##  5         5  0.346 
+##  6         6 -0.120 
+##  7         7 -0.0674
+##  8         8  0.155 
+##  9         9  0.113 
+## 10        10  0.208 
 ## # … with 990 more rows</code></pre>
 <pre class="r"><code>ggplot(data = null_dist1, aes(x = stat)) +
   geom_histogram()+
@@ -604,7 +604,7 @@ obs_stat1</code></pre>
 <pre><code>## # A tibble: 1 × 1
 ##   p_value
 ##     &lt;dbl&gt;
-## 1    0.01</code></pre>
+## 1   0.008</code></pre>
 </div>
 <div id="omega-group-plc--pay-discrimination" class="section level1">
 <h1>Omega Group plc- Pay Discrimination</h1>
