@@ -74,7 +74,7 @@ params:
       #    url: blogs/tempus
       - name: My resume
        #  url:https://www.dropbox.com/s/jicqvfs4930wodf/CV_AmyChen.pdf?dl=0     
-        url: elements.html
+        url: blogs/resume
     menu: Menu
     subtitle: By HTML5 Up
     title: Forty

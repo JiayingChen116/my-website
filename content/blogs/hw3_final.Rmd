@@ -8,7 +8,7 @@ draft: false
 image: pic10.jpg
 keywords: ""
 slug: ipsum
-title: Ipsum
+title: Homework 3 for Applied Statistics 
 ---
 
 ```{r, setup, echo=FALSE}

@@ -8,7 +8,7 @@ draft: false
 image: pic09.jpg
 keywords: ""
 slug: magna
-title: Magna
+title: Homework 1 for Applied Statistics 
 ---
 
 ```{r setup, warning = FALSE, echo=FALSE}
