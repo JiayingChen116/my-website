@@ -1,15 +1,14 @@
 ---
-title: "Session 6: Homework 3"
-author:  "Group 3 (Jiaying Chen, Yingjin He, Sabrina Seow, Kashish Solanki, Roman Vazquez Lorenzo, Maximilian Stock)"
-date: "`r Sys.Date()`"
-output:
-  html_document:
-    theme: flatly
-    highlight: zenburn
-    number_sections: yes
-    toc: yes
-    toc_float: yes
-    code_folding: show
+categories:
+- ""
+- ""
+date: "2017-10-31T21:28:43-05:00"
+description: ""
+draft: false
+image: pic10.jpg
+keywords: ""
+slug: ipsum
+title: Ipsum
 ---
 
 ```{r, setup, echo=FALSE}
@@ -694,138 +693,6 @@ scatter_election_brexit <- ggplot(adj_brexit_results, aes(x = general_election_2
   theme(legend.position = "bottom")
 
 scatter_election_brexit
-```
-
-# Challenge 2: CDC COVID-19 Public Use Data
-
-The [CDC Covid-19 Case Surveillance Data](https://data.cdc.gov/Case-Surveillance/COVID-19-Case-Surveillance-Public-Use-Data/vbim-akqf) is a case surveillance public use dataset with 12 elements for all COVID-19 cases shared with CDC and includes demographics, any exposure history, disease severity indicators and outcomes, presence of any underlying medical conditions and risk behaviors. You can see the variables from
-
-There are well over 28 million entries of individual, and we will work with SQLlite database, rather than a CSV file. I would like you to produce two graphs that show death % rate:
-
-1.  by age group, sex, and whether the patient had co-morbidities or not
-2.  by age group, sex, and whether the patient was admited to Intensive Care Unit (ICU) or not.
-
-```{r fetch_db_data, fig.width=11, warning = FALSE}
-#connect to the downloaded database
-cdc_database <- DBI::dbConnect(
-  drv = RSQLite::SQLite(),
-  dbname = "cdc_data.db" 
-)
-```
-
-```{r lookAtDB, fig.width=11, warning = FALSE}
-#show existing tables in the connected db
-DBI::dbListTables(cdc_database)
-```
-
-```{r setUpTable, fig.width=11, warning = FALSE}
-#assign the cdc table to the cdc_data dataframe
-cdc_data <- dplyr::tbl(cdc_database, "cdc")
-cdc_data
-
-#we use simply tidyverse language to have our queries translated into SQL code. We do this for two seperate queries: one for each plot (one including medcond_yn, and the other including icu_yn)
-query1 <-   cdc_data %>%
-  select("sex", "age_group", "medcond_yn", "death_yn") %>%
-  group_by(sex, age_group, medcond_yn, death_yn) %>% 
-  summarise(n = n()) %>%
-  mutate(deathRate = n / sum(n))
-
-query2 <-   cdc_data %>%
-  select("sex", "age_group", "icu_yn", "death_yn") %>%
-  group_by(sex, age_group, icu_yn, death_yn) %>% 
-  summarise(n = n()) %>%
-  mutate(deathRate = n / sum(n))
-
-#we assign the results from our queries to tibbles/data frames
-q1Tibble <- query1 %>% 
-  collect()
-
-q2Tibble <- query2 %>% 
-  collect()
-```
-
-```{r adjust_tibble, fig.width=11, warning = FALSE}
-
-#we filter out data which we do not need for the reproduction of the graph.
-q1TibbleAdj <- q1Tibble %>%
-  filter(!sex %in% c("Other", "Missing", "Unknown", "NA"), !age_group %in% c("Missing", "Unknown", "NA"), !medcond_yn %in% c("Missing", "Unknown", "NA"), !death_yn %in% c("Missing", "Unknown", "NA"))
-```
-
-```{r splitUpDeathRates, fig.width=11, warning = FALSE}
-#we calculate death rates after grouping by the necessary variables
-splitDeathRates <- q1TibbleAdj %>% 
-  group_by(sex, age_group, medcond_yn, death_yn) %>% 
-  summarise(n = sum(n)) %>% 
-  mutate(deathRate = n/sum(n))
-
-#let's view what we have created. We can see that the deathRate is split up by sex, age group, and the presence co-morbidities which we want, in order to be able to reproduce the graph
-head(splitDeathRates)
-```
-
-```{r facet_splitDeathRates, fig.height=8, fig.width=13}
-
-facet_DeathRates_medcond <- splitDeathRates %>% 
-  filter(death_yn == "Yes") %>%
-   mutate(medcond_yn = recode(medcond_yn, #We recode the values for the co-morbidities coloumn, in order to be able to view the wanted plot labels
-    "Yes" = "With Comorbidities",
-    "No" = "Without Comorbidities",
-  )) %>% 
-  ggplot()+
-    geom_col(aes(y = age_group, x = deathRate), fill = "#687ca8")+
-  
-    geom_text(aes(x = deathRate, y = age_group, label = percent(round(deathRate, 3))), color = "black", size = 5, hjust = -0.1, vjust = 0.3)+ #we add data labels
-
-    facet_grid(fct_relevel(medcond_yn, "With Comorbidities", "Without Comorbidities") ~ sex)+ #for the first time, we use facet_grid in order to be able to specify our plot rows and columns 
-  
-    scale_x_continuous(labels = percent)+
-  
-    theme_bw()+
-    theme(plot.background = element_blank())+
-    labs(title = "Covid death % by age group, sex and presence of co-morbidities")
-  
-facet_DeathRates_medcond
-```
-
-```{r adjust_tibble2, fig.width=11, warning = FALSE}
-
-#we filter out data which we do not need for the reproduction of the graph.
-q2TibbleAdj <- q2Tibble %>%
-  filter(!sex %in% c("Other", "Missing", "Unknown", "NA"), !age_group %in% c("Missing", "Unknown", "NA"), !icu_yn %in% c("Missing", "Unknown", "NA"), !death_yn %in% c("Missing", "Unknown", "NA"))
-```
-
-```{r splitUpDeathRates2, fig.width=11, warning = FALSE}
-#we calculate death rates after grouping by the necessary variables
-splitDeathRates2 <- q2TibbleAdj %>% 
-  group_by(sex, age_group, icu_yn, death_yn) %>% 
-  summarise(n = sum(n)) %>% 
-  mutate(deathRate = n/sum(n))
-
-#let's view what we have created. We can see that the deathRate is split up by sex, age group, and the presence co-morbidities which we want, in order to be able to reproduce the graph
-head(splitDeathRates2)
-```
-
-```{r facet_splitDeathRates2, fig.height=8, fig.width=13}
-
-facet_DeathRates_icu <- splitDeathRates2 %>% 
-  filter(death_yn == "Yes") %>%
-   mutate(icu_yn = recode(icu_yn,#We recode the values for the ICU Admission coloumn, in order to be able to view the wanted plot labels
-    "Yes" = "ICU Admission",
-    "No" = "No ICU Admission",
-  )) %>% 
-  ggplot()+
-    geom_col(aes(y = age_group, x = deathRate), fill = "#ff8f7c")+
-  
-    geom_text(aes(x = deathRate, y = age_group, label = percent(round(deathRate, 2))), color = "black", size = 5, hjust = -0.1, vjust = 0.3)+ #we add data labels
-
-    facet_grid(fct_relevel(icu_yn, "ICU Admission", "No ICU Admission") ~ sex)+ #for the second time now, we use facet_grid in order to be able to specify our plot rows and columns 
-  
-    scale_x_continuous(labels = percent)+
-  
-    theme_bw()+
-    theme(plot.background = element_blank())+
-    labs(title = "Covid death % by age group, sex and ICU Admission")
-  
-facet_DeathRates_icu
 ```
 
 # Challenge 3:GDP components over time and among countries

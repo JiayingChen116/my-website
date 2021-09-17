@@ -86,33 +86,33 @@ params:
         title: Biography
         url: blogs/aliquam
       - image: purple.jpeg
-        subtitle: My very first project in R!
+        subtitle: My very first personal project based on R!
         title: Pre-programme Assignment of MAM2022
         url: blogs/tempus
-      - image: movieback.JPG
-        subtitle: Lorem Etiam Nullam
-        title: Magna
+      - image: vaxtrump.jpg
+        subtitle: In this project, I collaborated with five group members and conducted analytics on IBM HR data and Vaccination V.S. Election Results. 
+        title: Homework 1 
         url: blogs/magna
       - image: pic04.jpg
-        subtitle: Nisl Sed Aliquam
-        title: Ipsum
+        subtitle: In this project,I mainly worked on worldbank data and investigated the correlation of GDP,fertility rate, life expectancy and education level in different countries worldwide.
+        title: Homework 2 
         url: blogs/ipsum
       - image: pic05.jpg
-        subtitle: Ipsum Dolor Sit Amet
-        title: Consequat
+        subtitle: In this project, I took the callenge to take a further look into the how the percentage of GDP compositions change over time among different countries and gain insights.
+        title: Homework 3
         url: blogs/ipsum
-      - image: pic06.jpg
-        subtitle: Feugiat Amet Tempus
-        title: Etiam
-        url: blogs/ipsum
-  two:
-    buttonText: Get Started
-    enable: yes
-    subtitle: "Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero.
-      \n    Mauris aliquet magna magna sed nunc rhoncus pharetra. \n    Pellentesque
-      condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia
-      pellentesque lorem ipsum dolor. \n    Nullam et orci eu lorem consequat tincidunt.
-      Vivamus et sagittis libero.\n    Mauris aliquet magna magna sed nunc rhoncus
-      amet pharetra et feugiat tempus."
-    title: Massa libero
-    url: blogs
+      # - image: pic06.jpg
+      #   subtitle: Feugiat Amet Tempus
+      #   title: Etiam
+      #   url: blogs/ipsum
+  # two:
+  #   buttonText: Get Started
+  #   enable: yes
+  #   subtitle: "Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero.
+  #     \n    Mauris aliquet magna magna sed nunc rhoncus pharetra. \n    Pellentesque
+  #     condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia
+  #     pellentesque lorem ipsum dolor. \n    Nullam et orci eu lorem consequat tincidunt.
+  #     Vivamus et sagittis libero.\n    Mauris aliquet magna magna sed nunc rhoncus
+  #     amet pharetra et feugiat tempus."
+  #   title: Massa libero
+  #   url: blogs
