@@ -60,7 +60,7 @@ params:
   name: Jiaying Chen
   navigation:
     button1:
-      - name: Get Started
+      - name: My projects
         url: blogs
     # button2:
     #   - name: Log In
