@@ -9,7 +9,7 @@ params:
     buttonText: Get Started
     subtitle: |-
       Welcome to Amy's portfolio website! Get to know me better .
-    title: Hi, my name is Jiaying (Amy) Chen. Nice to meet you!
+    title: Hello, I am Jiaying (Amy) Chen. 
   blog: {}
   contact:
     address:
@@ -60,7 +60,7 @@ params:
   name: Jiaying Chen
   navigation:
     button1:
-      - name: My projects
+      - name: View My Projects
         url: blogs
     # button2:
     #   - name: Log In
@@ -73,7 +73,6 @@ params:
       # - name: My projects
       #    url: blogs/tempus
       - name: My resume
-       #  url:https://www.dropbox.com/s/jicqvfs4930wodf/CV_AmyChen.pdf?dl=0     
         url: blogs/resume
     menu: Menu
     subtitle: By HTML5 Up
@@ -93,18 +92,18 @@ params:
         subtitle: In this project, I collaborated with five group members and conducted analytics on IBM HR data and Vaccination V.S. Election Results. 
         title: Homework 1 
         url: blogs/magna
-      - image: pic04.jpg
+      - image: ferrate.png
         subtitle: In this project,I mainly worked on worldbank data and investigated the correlation of GDP,fertility rate, life expectancy and education level in different countries worldwide.
         title: Homework 2 
-        url: blogs/ipsum
-      - image: pic05.jpg
+        url: blogs/hw2
+      - image: gdpback.jpeg
         subtitle: In this project, I took the callenge to take a further look into the how the percentage of GDP compositions change over time among different countries and gain insights.
         title: Homework 3
         url: blogs/ipsum
-      # - image: pic06.jpg
-      #   subtitle: Feugiat Amet Tempus
-      #   title: Etiam
-      #   url: blogs/ipsum
+      - image: cvimage.png
+         subtitle: Feel free to take a look at my resume to learn more about my past working and research experience.
+         title: My resume
+         url: blogs/resume
   # two:
   #   buttonText: Get Started
   #   enable: yes
