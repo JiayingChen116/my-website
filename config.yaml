@@ -101,9 +101,9 @@ params:
         title: Homework 3
         url: blogs/ipsum
       - image: cvimage.png
-         subtitle: Feel free to take a look at my resume to learn more about my past working and research experience.
-         title: My resume
-         url: blogs/resume
+        subtitle: Feel free to take a look at my resume to learn more about my past working and research experience.
+        title: My resume
+        url: blogs/resume
   # two:
   #   buttonText: Get Started
   #   enable: yes
