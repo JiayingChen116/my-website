@@ -95,7 +95,8 @@ params:
       - image: ferrate.png
         subtitle: In this project,I mainly worked on worldbank data and investigated the correlation of GDP,fertility rate, life expectancy and education level in different countries worldwide.
         title: Homework 2 
-        url: blogs/hw2
+        #bug:can't see hw2
+        url: blogs/hwtwo
       - image: gdpback.jpeg
         subtitle: In this project, I took the callenge to take a further look into the how the percentage of GDP compositions change over time among different countries and gain insights.
         title: Homework 3
