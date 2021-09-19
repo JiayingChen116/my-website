@@ -3,12 +3,12 @@ categories:
 - ""
 - ""
 date: "2017-10-31T22:26:09-05:00"
-description: Lorem Etiam Nullam
+description: In this project, I collaborated with five group members and conducted analytics on IBM HR data and Covid Vaccination V.S. Election Results. 
 draft: false
 image: ""
 keywords: ""
 slug: magna
-title: Homework 1 for Applied Statistics 
+title: Project 1 Covid Vaccination V.S. Election Results
 ---
 
 ```{r setup, warning = FALSE, echo=FALSE}

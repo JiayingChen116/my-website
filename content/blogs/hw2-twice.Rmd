@@ -3,12 +3,12 @@ categories:
 - ""
 - ""
 date: "2017-10-31T22:26:09-06:00"
-description: In this project,I mainly worked on worldbank data and investigated the correlation of GDP,fertility rate, life expectancy and education level in different countries worldwide.
+description: In this project, I mainly worked on worldbank data and investigated the correlation of GDP, fertility rate, life expectancy and education level in different countries throughout the world.
 draft: false
 image: ""
 keywords: ""
 slug: hwtwo
-title: Project 2 for Applied Statistics 
+title: Project 2 Insights on Worldbank Data 
 ---
 
 ```{r setup, include=FALSE}
