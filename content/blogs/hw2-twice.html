@@ -1,15 +1,14 @@
 ---
-title: "Session 4: Homework 2"
-author: "Group 3 (Jiaying Chen, Yingjin He, Sabrina Seow, Kashish Solanki, Roman Vazquez Lorenzo, Maximilian Stock)"
-date: "2021-09-18"
-output:
-  html_document:
-    theme: flatly
-    highlight: zenburn
-    number_sections: yes
-    toc: yes
-    toc_float: yes
-    code_folding: show
+categories:
+- ""
+- ""
+date: "2017-10-31T22:26:09-06:00"
+description: In this project,I mainly worked on worldbank data and investigated the correlation of GDP,fertility rate, life expectancy and education level in different countries worldwide.
+draft: false
+image: ""
+keywords: ""
+slug: hwtwo
+title: Project 2 for Applied Statistics 
 ---
 
 <script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
@@ -52,7 +51,7 @@ output:
   )+
   # scale_x_date(date_breaks = seq(min(tidyweather$date), max(tidyweather$date), by = 8300))
      scale_x_date(date_labels = &quot;%Y&quot;, date_breaks = &quot;10 years&quot;)</code></pre>
-<p><img src="/blogs/homework2_files/figure-html/graphDeltaWeather-1.png" width="1056" style="display: block; margin: auto;" /></p>
+<p><img src="/blogs/hw2-twice_files/figure-html/graphDeltaWeather-1.png" width="1056" style="display: block; margin: auto;" /></p>
 <p>Scatter plot for each month:</p>
 <pre class="r"><code>tidyweather$Month &lt;- factor(tidyweather$Month, 
                             levels = c(&quot;Jan&quot;, &quot;Feb&quot;, &quot;Mar&quot;, &quot;Apr&quot;, &quot;May&quot;, &quot;Jun&quot;, &quot;Jul&quot;, &quot;Aug&quot;, &quot;Sep&quot;, &quot;Oct&quot;, &quot;Nov&quot;, &quot;Dec&quot;)) #so that the facet wrap shows according to months
@@ -68,7 +67,7 @@ ggplot(tidyweather, aes(x=date, y=Delta))+
     x = &quot;Year&quot;,
     y = &quot;Delta in T (°C)&quot;
   )</code></pre>
-<p><img src="/blogs/homework2_files/figure-html/facet_wrap-1.png" width="1056" style="display: block; margin: auto;" /></p>
+<p><img src="/blogs/hw2-twice_files/figure-html/facet_wrap-1.png" width="1056" style="display: block; margin: auto;" /></p>
 <p><em>Based on our analysis, the effect of increasing temperature seems to be constant throughout the year. A more obvious indicator would be the Year instead - the effect of increasing temperature is more pronounced after the period between 1951-1980 as we can see a steep increase in the graph.</em></p>
 </div>
 <div id="grouping-the-data-into-time-periods" class="section level2">
@@ -94,7 +93,7 @@ ggplot(tidyweather, aes(x=date, y=Delta))+
     y     = &quot;Density&quot;,         #changing y-axis label to sentence case
     x = &quot;Delta in T (°C)&quot;
   )</code></pre>
-<p><img src="/blogs/homework2_files/figure-html/density_plot-1.png" width="1056" style="display: block; margin: auto;" /></p>
+<p><img src="/blogs/hw2-twice_files/figure-html/density_plot-1.png" width="1056" style="display: block; margin: auto;" /></p>
 </div>
 <div id="average-annual-anomalies" class="section level2">
 <h2>Average annual anomalies</h2>
@@ -115,7 +114,7 @@ labs (
     y = &quot;Delta in T (°C)&quot;
   )+
   scale_x_continuous(n.breaks = 20)</code></pre>
-<p><img src="/blogs/homework2_files/figure-html/averaging-1.png" width="1056" style="display: block; margin: auto;" /></p>
+<p><img src="/blogs/hw2-twice_files/figure-html/averaging-1.png" width="1056" style="display: block; margin: auto;" /></p>
 </div>
 <div id="confidence-interval-for-delta" class="section level2">
 <h2>Confidence Interval for <code>delta</code></h2>
@@ -182,7 +181,7 @@ percentile_ci</code></pre>
     y = &quot;Count&quot;
     
   )</code></pre>
-<p><img src="/blogs/homework2_files/figure-html/visualizing_bootstrap-1.png" width="1056" style="display: block; margin: auto;" /></p>
+<p><img src="/blogs/hw2-twice_files/figure-html/visualizing_bootstrap-1.png" width="1056" style="display: block; margin: auto;" /></p>
 <p><em>Based on our analysis, the 95% confidence interval (CI) for the average annual delta since 2011 was calculated as (1.01, 1.11). This means that we can be 95% confident that the average annual delta falls within 1.01 and 1.11. We constructed the CI using the formula method and using a bootstrap simulation, both method gives us a very similar width - the shaded area is the CI calculated using a bootstrap simulation and the range between the dotted lines is the CI calculated using the formula.</em></p>
 </div>
 </div>
@@ -430,7 +429,7 @@ gss_email</code></pre>
 
   
 email_distribution</code></pre>
-<p><img src="/blogs/homework2_files/figure-html/face_wrap_email-1.png" width="1056" style="display: block; margin: auto;" /></p>
+<p><img src="/blogs/hw2-twice_files/figure-html/face_wrap_email-1.png" width="1056" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>email_mean &lt;- gss_email%&gt;%
   group_by(degree)%&gt;%
   summarise(mean = mean(email), median = median(email))%&gt;%
@@ -538,7 +537,7 @@ approval_biden&lt;-approval_plot%&gt;%
   ylim(-15,30)
      
 approval_plot1</code></pre>
-<p><img src="/blogs/homework2_files/figure-html/biden_plot-1.png" width="1056" style="display: block; margin: auto;" /></p>
+<p><img src="/blogs/hw2-twice_files/figure-html/biden_plot-1.png" width="1056" style="display: block; margin: auto;" /></p>
 </div>
 <div id="compare-confidence-intervals" class="section level2">
 <h2>Compare Confidence Intervals</h2>
@@ -868,7 +867,7 @@ hiv_life_expectancy &lt;- ggplot(new_dataset,aes(x=hiv_pct, y=life_expectancy))+
   NULL
 
 hiv_life_expectancy</code></pre>
-<p><img src="/blogs/homework2_files/figure-html/hiv_life_expectancy-1.png" width="1056" style="display: block; margin: auto;" /></p>
+<p><img src="/blogs/hw2-twice_files/figure-html/hiv_life_expectancy-1.png" width="1056" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>#faceting by regions
 hiv_life_expectancy_region &lt;- ggplot(new_dataset, aes(x=hiv_pct, y=life_expectancy))+
   geom_point(aes(color=region), size=0.2)+
@@ -882,7 +881,7 @@ hiv_life_expectancy_region &lt;- ggplot(new_dataset, aes(x=hiv_pct, y=life_expec
   NULL
 
 hiv_life_expectancy_region</code></pre>
-<p><img src="/blogs/homework2_files/figure-html/hiv_life_expectancy-2.png" width="1056" style="display: block; margin: auto;" />
+<p><img src="/blogs/hw2-twice_files/figure-html/hiv_life_expectancy-2.png" width="1056" style="display: block; margin: auto;" />
 <em>From the scatterplot above, we can observe that HIV prevalence is generally negatively related with life expectancy. Those countries with higher life expectancy are more likely to have lower HIV prevalence rates, probably because those countries are in better medical conditions. As for the difference between regions, most regions show a negative relationship between HIV prevalence and life expectancy, except Europe&amp; Central Asia and North America. This is probably because these regions keep very low HIV prevalence so the pattern is not so obvious. Another point is that Sub-Saharan Africa has a lower life expectancy and higher HIV prevalence compared to other regions.</em></p>
 <ol start="2" style="list-style-type: decimal">
 <li>What is the relationship between fertility rate and GDP per capita? Generate a scatterplot with a smoothing line to report your results. You may find facetting by region useful</li>
@@ -899,7 +898,7 @@ fertility_gdp &lt;- ggplot(worldbank2, aes(x=NY.GDP.PCAP.KD, y=SP.DYN.TFRT.IN))+
   NULL</code></pre>
 <pre><code>## NULL</code></pre>
 <pre class="r"><code>fertility_gdp</code></pre>
-<p><img src="/blogs/homework2_files/figure-html/fertility_gdp-1.png" width="1056" style="display: block; margin: auto;" /></p>
+<p><img src="/blogs/hw2-twice_files/figure-html/fertility_gdp-1.png" width="1056" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>#faceting by regions
 fertility_gdp_region &lt;- new_dataset %&gt;% 
   # filter(year == 2011) %&gt;% 
@@ -915,7 +914,7 @@ fertility_gdp_region &lt;- new_dataset %&gt;%
   NULL
 
 fertility_gdp_region</code></pre>
-<p><img src="/blogs/homework2_files/figure-html/fertility_gdp-2.png" width="1056" style="display: block; margin: auto;" />
+<p><img src="/blogs/hw2-twice_files/figure-html/fertility_gdp-2.png" width="1056" style="display: block; margin: auto;" />
 <em>As the scatterplot above indicates, there is a negative correlation between fertility rate and GDP per capita. This relationship is especially strong in regions that are typically less developed such as Sub-Saharan Africa and South Asia. In North America, the trendline is slightly positive, possibly due to the small sample size. Overall, Europe &amp; Central Asia have the lowest fertility rate and highest GDP per capita among all the regions.</em></p>
 <ol start="3" style="list-style-type: decimal">
 <li>Which regions have the most observations with missing HIV data? Generate a bar chart (<code>geom_col()</code>), in descending order.</li>
@@ -932,7 +931,7 @@ hiv_miss &lt;- ggplot()+
   theme(legend.position = &quot;none&quot;)
 
 hiv_miss</code></pre>
-<p><img src="/blogs/homework2_files/figure-html/hiv_missing_data-1.png" width="1056" style="display: block; margin: auto;" />
+<p><img src="/blogs/hw2-twice_files/figure-html/hiv_missing_data-1.png" width="1056" style="display: block; margin: auto;" />
 <em>As the barchart indicates, the Sub-Saharan Africa has the most observations with 497 missing HIV data, followed by Europe &amp; Central Asia, which has 435 missing HIV data.</em></p>
 <ol start="4" style="list-style-type: decimal">
 <li>How has mortality rate under 5 changed by region? In each region, find the top 5 countries that have seen the greatest improvement, as well as those 5 countries where mortality rates have had the least improvement or even deterioration.</li>
@@ -948,7 +947,7 @@ mortality_by_region &lt;- ggplot(worldbank2, aes(x=year, y=SH.DYN.MORT))+
   NULL
   
 mortality_by_region</code></pre>
-<p><img src="/blogs/homework2_files/figure-html/mortality%20rate%20under%205%20change-1.png" width="1056" style="display: block; margin: auto;" />
+<p><img src="/blogs/hw2-twice_files/figure-html/mortality%20rate%20under%205%20change-1.png" width="1056" style="display: block; margin: auto;" />
 <em>Overall, the mortality rate under 5 has declined since 1960. Among all of the regions, South Asia has the greatest improvement while North America has the least improvement.</em></p>
 <pre class="r"><code>#top 5 countries that have seen the greatest improvement in each region
 
@@ -1011,7 +1010,7 @@ least_5_country</code></pre>
   NULL
 
 top_5_country_bar</code></pre>
-<p><img src="/blogs/homework2_files/figure-html/top%205%20countries%20greatest%20improvement%20in%20each%20region-1.png" width="1440" style="display: block; margin: auto;" /></p>
+<p><img src="/blogs/hw2-twice_files/figure-html/top%205%20countries%20greatest%20improvement%20in%20each%20region-1.png" width="1440" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>least_5_country_bar &lt;- ggplot()+
   geom_col(data=least_5_country, aes(x=reorder(country,-improvement), y=improvement,fill=improvement))+
   facet_wrap(vars(region), scales = &quot;free_x&quot; )+
@@ -1020,7 +1019,7 @@ top_5_country_bar</code></pre>
   NULL
 
 least_5_country_bar </code></pre>
-<p><img src="/blogs/homework2_files/figure-html/top%205%20countries%20greatest%20improvement%20in%20each%20region-2.png" width="1440" style="display: block; margin: auto;" />
+<p><img src="/blogs/hw2-twice_files/figure-html/top%205%20countries%20greatest%20improvement%20in%20each%20region-2.png" width="1440" style="display: block; margin: auto;" />
 <em>The tables above show the Top 5 countries that have experienced the greatest/least improvement in mortality rate from 1960 to 2016 by region. For instance, in east Asia &amp; Pacific Korea, Rep., Singapore, Japan, Thailand and China have made the greatest improvement while in Micronesia Palau, Nauru, Tuvalu and Fiji have made the least improvement. As for South Asia and North America, since the number of the countries is less than 10, the Top 5 and Last 5 are not very representative. We didn’t observe that there is any deterioration in mortality rate so far. The country that experienced the least improvement is Somalia in Sub-Saharan Africa with 0.346 improvement.</em></p>
 <ol start="5" style="list-style-type: decimal">
 <li>Is there a relationship between primary school enrollment and fertility rate?</li>
@@ -1032,7 +1031,7 @@ least_5_country_bar </code></pre>
   theme_bw()+
   NULL
 school_fertility</code></pre>
-<p><img src="/blogs/homework2_files/figure-html/school_enrollment_vs_fertility_rate-1.png" width="1056" style="display: block; margin: auto;" /></p>
+<p><img src="/blogs/hw2-twice_files/figure-html/school_enrollment_vs_fertility_rate-1.png" width="1056" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>school_fertility_region &lt;- ggplot(worldbank2, aes(x=SE.PRM.NENR, y=SP.DYN.TFRT.IN))+
   geom_point(aes(color=region), size=0.2)+
   labs(title = &quot;Scatterplot of fertility rate and primary school enrollment by region&quot;, y = &quot;fertility rate&quot;, x= &quot;primary school enrollment&quot;)+
@@ -1042,7 +1041,7 @@ school_fertility</code></pre>
   theme(legend.position = &quot;none&quot;)+
   NULL
 school_fertility_region</code></pre>
-<p><img src="/blogs/homework2_files/figure-html/school_enrollment_vs_fertility_rate-2.png" width="1056" style="display: block; margin: auto;" /></p>
+<p><img src="/blogs/hw2-twice_files/figure-html/school_enrollment_vs_fertility_rate-2.png" width="1056" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>fertility_change &lt;- ggplot(worldbank2, aes(x=year, y=SP.DYN.TFRT.IN))+
   geom_point(aes(color=country), size=0.2)+
   labs(title = &quot;Scatterplot of fertility rate by year per region&quot;, y = &quot;fertility rate&quot;, x= &quot;year&quot;)+
@@ -1052,7 +1051,7 @@ school_fertility_region</code></pre>
   theme(legend.position = &quot;none&quot;)+
   NULL
 fertility_change</code></pre>
-<p><img src="/blogs/homework2_files/figure-html/school_enrollment_vs_fertility_rate-3.png" width="1056" style="display: block; margin: auto;" /></p>
+<p><img src="/blogs/hw2-twice_files/figure-html/school_enrollment_vs_fertility_rate-3.png" width="1056" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>enrollment_change&lt;- ggplot(worldbank2, aes(x=year, y=SE.PRM.NENR))+
   geom_point(aes(color=country), size=0.2)+
   labs(title = &quot;Scatterplot of primary school enrollment rate by year per region&quot;, y = &quot;primary school enrollment&quot;, x= &quot;year&quot;)+
@@ -1064,7 +1063,7 @@ fertility_change</code></pre>
   NULL</code></pre>
 <pre><code>## NULL</code></pre>
 <pre class="r"><code>enrollment_change</code></pre>
-<p><img src="/blogs/homework2_files/figure-html/school_enrollment_vs_fertility_rate-4.png" width="1056" style="display: block; margin: auto;" /></p>
+<p><img src="/blogs/hw2-twice_files/figure-html/school_enrollment_vs_fertility_rate-4.png" width="1056" style="display: block; margin: auto;" /></p>
 <p><em>As the first and second scatterplot above indicates, there is a negative correlation between fertility rate and primary school enrollment rate. To explore the reason, we took a further look at how fertility rate and primary school enrollment rate have changed from 1960 to 2016 by each country in the respective regions. We can observe an obvious fertility rate decline as well as a rise in primary school enrollment which indicates the overall educational level has improved over the years. This may furthermore explain the negative correlation between fertility rate and primary school enrollment rate.</em></p>
 </div>
 <div id="challenge-1-excess-rentals-in-tfl-bike-sharing" class="section level1">
@@ -1073,12 +1072,12 @@ fertility_change</code></pre>
 
 # Download TFL data to temporary file
 httr::GET(url, write_disk(bike.temp &lt;- tempfile(fileext = &quot;.xlsx&quot;)))</code></pre>
-<pre><code>## Response [https://airdrive-secure.s3-eu-west-1.amazonaws.com/london/dataset/number-bicycle-hires/2021-08-23T14%3A32%3A29/tfl-daily-cycle-hires.xlsx?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJJDIMAIVZJDICKHA%2F20210917%2Feu-west-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20210917T231957Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=20c90cd93f097795d860faf5c273e3f7bc2c4d76d37b1e207182f237af131ee7&amp;X-Amz-SignedHeaders=host]
-##   Date: 2021-09-17 23:19
+<pre><code>## Response [https://airdrive-secure.s3-eu-west-1.amazonaws.com/london/dataset/number-bicycle-hires/2021-08-23T14%3A32%3A29/tfl-daily-cycle-hires.xlsx?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJJDIMAIVZJDICKHA%2F20210919%2Feu-west-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20210919T141006Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=372fa9baa0df1d558880f7ea164793dc87264dc57925c3f2814aec9c768cd6f9&amp;X-Amz-SignedHeaders=host]
+##   Date: 2021-09-19 14:13
 ##   Status: 200
 ##   Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
 ##   Size: 173 kB
-## &lt;ON DISK&gt;  /var/folders/43/_83zd4gn2sx502x88934l6tr0000gn/T//RtmpVuY9Pk/file12dcb30e3683e.xlsx</code></pre>
+## &lt;ON DISK&gt;  /var/folders/43/_83zd4gn2sx502x88934l6tr0000gn/T//RtmpOU2MzN/file46a7730b0e4.xlsx</code></pre>
 <pre class="r"><code># Use read_excel to read it as dataframe
 bike0 &lt;- read_excel(bike.temp,
                    sheet = &quot;Data&quot;,
@@ -1108,7 +1107,7 @@ facet_monthly_bike_rentals &lt;- bike %&gt;%
     
 
 facet_monthly_bike_rentals</code></pre>
-<p><img src="/blogs/homework2_files/figure-html/facet_bike_rentals-1.png" width="1440" style="display: block; margin: auto;" /></p>
+<p><img src="/blogs/hw2-twice_files/figure-html/facet_bike_rentals-1.png" width="1440" style="display: block; margin: auto;" /></p>
 <p>Look at May and Jun and compare 2020 with the previous years. What’s happening?</p>
 <p><em>It is observable, that the distribution of bike rentals in May and June tends to be more concentrated and centralised around 40,000 daily bike rentals than in many of the other months. This might be due to the fact that temperatures and the overall weather is more stable in these months, and thus there is less fluctuation in daily demand.</em>
 <em>Looking at the overall distribution of bike rentals in 2020 compared to the previous years, the first two months seem similar. However, starting from March, a shift in distribution towards the left, can be seen, indicating that bike rentals incurred a period of less demand. This can likely be attributed to the outbreak of the COVID19 pandemic, and people staying home more frequently. This trend continues until the month of June, from which bike rentals follow the previous years’ distributions more closely once again.</em></p>
@@ -1167,7 +1166,7 @@ plotActualForecast &lt;- bike_diff %&gt;%
     theme(strip.background = element_blank())
 
 plotActualForecast</code></pre>
-<p><img src="/blogs/homework2_files/figure-html/plot_bike_diff-1.png" width="1056" style="display: block; margin: auto;" /></p>
+<p><img src="/blogs/hw2-twice_files/figure-html/plot_bike_diff-1.png" width="1056" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>weekly_mean &lt;- bike %&gt;%
   filter(year %in% c(2016, 2017, 2018, 2019, 2020, 2021)) %&gt;% 
   select(&quot;bikes_hired&quot;, &quot;week&quot;) %&gt;% 
@@ -1196,7 +1195,7 @@ plotWeeklyBike &lt;- joinedWeeklyBike %&gt;%
     theme_bw()
 
 plotWeeklyBike</code></pre>
-<p><img src="/blogs/homework2_files/figure-html/plot_bike_weekly-1.png" width="1056" style="display: block; margin: auto;" /></p>
+<p><img src="/blogs/hw2-twice_files/figure-html/plot_bike_weekly-1.png" width="1056" style="display: block; margin: auto;" /></p>
 <p>Should you use the mean or the median to calculate your expected rentals? Why?</p>
 <p><em>It makes sense to use the mean for calculating expected rentals, as we really need to take very low and very high numbers into consideration. If one were to use the median, and thereby ignore outlying values, the supply might not be well prepared for keeping up with demand on specific days.</em></p>
 </div>

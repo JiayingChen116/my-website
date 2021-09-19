@@ -1,15 +1,14 @@
 ---
-title: "Session 4: Homework 2"
-author: "Group 3 (Jiaying Chen, Yingjin He, Sabrina Seow, Kashish Solanki, Roman Vazquez Lorenzo, Maximilian Stock)"
-date: "`r Sys.Date()`"
-output:
-  html_document:
-    theme: flatly
-    highlight: zenburn
-    number_sections: yes
-    toc: yes
-    toc_float: yes
-    code_folding: show
+categories:
+- ""
+- ""
+date: "2017-10-31T22:26:09-06:00"
+description: In this project,I mainly worked on worldbank data and investigated the correlation of GDP,fertility rate, life expectancy and education level in different countries worldwide.
+draft: false
+image: ""
+keywords: ""
+slug: hwtwo
+title: Project 2 for Applied Statistics 
 ---
 
 ```{r setup, include=FALSE}

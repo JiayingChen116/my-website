@@ -86,20 +86,19 @@ params:
         url: blogs/aliquam
       - image: purple.jpeg
         subtitle: My very first personal project based on R!
-        title: Pre-programme Assignment of MAM2022
+        title: Pre-Programme Project MAM 2022
         url: blogs/tempus
       - image: vaxtrump.jpg
         subtitle: In this project, I collaborated with five group members and conducted analytics on IBM HR data and Vaccination V.S. Election Results. 
-        title: Homework 1 
+        title: Project 1 for Applied Statistics 
         url: blogs/magna
       - image: ferrate.png
         subtitle: In this project,I mainly worked on worldbank data and investigated the correlation of GDP,fertility rate, life expectancy and education level in different countries worldwide.
-        title: Homework 2 
-        #bug:can't see hw2
+        title: Project 2 for Applied Statistics 
         url: blogs/hwtwo
       - image: gdpback.jpeg
         subtitle: In this project, I took the callenge to take a further look into the how the percentage of GDP compositions change over time among different countries and gain insights.
-        title: Homework 3
+        title: Project 3 for Applied Statistics 
         url: blogs/ipsum
       - image: cvimage.png
         subtitle: Feel free to take a look at my resume to learn more about my past working and research experience.
