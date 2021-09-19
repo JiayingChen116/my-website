@@ -17,8 +17,8 @@ params:
         country: United Kingdom
         street: Glentworth Street 
         title: Address
-    buttonClear: Clear
-    buttonSend: Send message
+    # buttonClear: Clear
+    # buttonSend: Send message
     email:
       - email: jchen.mam2022@london.edu
         title: Email
@@ -57,7 +57,7 @@ params:
         label: LinkedIn
         url: https://www.linkedin.com/in/jiaying-chen-0934/
   image: ''
-  name: Jiaying Chen
+  # name: Jiaying Chen
   navigation:
     button1:
       - name: View My Projects
@@ -97,13 +97,13 @@ params:
         title: Project 2 for Applied Statistics 
         url: blogs/hwtwo
       - image: gdpback.jpeg
-        subtitle: In this project, I took the callenge to take a further look into the how the percentage of GDP compositions change over time among different countries and gain insights.
+        subtitle: In this project, I took the challenge to take a further look into the how the percentage of GDP compositions change over time among different countries and gain insights.
         title: Project 3 for Applied Statistics 
         url: blogs/ipsum
       - image: cvimage.png
         subtitle: Feel free to take a look at my resume to learn more about my past working and research experience.
         title: My resume
-        url: blogs/resume
+        url: resume
   # two:
   #   buttonText: Get Started
   #   enable: yes
