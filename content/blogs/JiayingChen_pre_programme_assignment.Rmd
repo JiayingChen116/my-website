@@ -3,15 +3,12 @@ categories:
 - ""
 - ""
 date: "2017-10-31T22:42:51-05:00"
-description: Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna
-  sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa
-  sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem
-  consequat tincidunt. Vivamus et sagittis tempus.
+description: My very first personal project based on R!
 draft: false
 image: ""
 keywords: ""
 slug: tempus
-title: Pre-Programme Assignment 
+title: Pre-Programme Project MAM 2022
 ---
 
 ```{r load-libraries, warning=FALSE, message=FALSE, echo=FALSE}
@@ -321,14 +318,3 @@ Which of these four graphs do you think best communicates the variability of the
 -   Based on median incident cost, the cheapest to rescue is heavy livestock animals. 
 -   Cats are the most common animal to rescue with over three thousand incidents while cows are the least common animal to rescue with only eight incidents. 
 
-# Submit the assignment
-
-Knit the completed R Markdown file as an HTML document (use the "Knit" button at the top of the script editor window) and upload it to Canvas.
-
-## Details
-
-If you want to, please answer the following
-
--   Who did you collaborate with: n/a
--   Approximately how much time did you spend on this problem set: 3 HOURS
--   What, if anything, gave you the most trouble: Xcode on MAC
