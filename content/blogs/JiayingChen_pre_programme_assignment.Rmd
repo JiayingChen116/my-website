@@ -3,9 +3,9 @@ categories:
 - ""
 - ""
 date: "2017-10-31T22:42:51-05:00"
-description: My very first personal project based on R!
+description: My very first personal project based on R! I accomplished three tasks about life expectancy, brexit note and animal rescue.
 draft: false
-image: purple.jpeg
+image: animalsave.png
 keywords: ""
 slug: tempus
 title: Pre-Programme Project MAM 2022
@@ -18,9 +18,9 @@ library(here)
 library(janitor)
 ```
 
-# Task 2: `gapminder` country comparison
+# Task 1: `gapminder` country comparison
 
-You have seen the `gapminder` dataset that has data on life expectancy, population, and GDP per capita for 142 countries from 1952 to 2007. To get a glimpse of the dataframe, namely to see the variable names, variable types, etc., we use the `glimpse` function. We also want to have a look at the first 20 rows of data.
+To get a glimpse of the dataframe, namely to see the variable names, variable types, etc., we use the `glimpse` function. We also want to have a look at the first 20 rows of data.
 
 ```{r}
 glimpse(gapminder)
@@ -28,10 +28,6 @@ glimpse(gapminder)
 head(gapminder, 20) # look at the first 20 rows of the dataframe
 
 ```
-
-Your task is to produce two graphs of how life expectancy has changed over the years for the `country` and the `continent` you come from.
-
-I have created the `country_data` and `continent_data` with the code below.
 
 ```{r}
 country_data <- gapminder %>% 
@@ -41,7 +37,7 @@ continent_data <- gapminder %>%
             filter(continent == "Asia")
 ```
 
-First, create a plot of life expectancy over time for the single country you chose. Map `year` on the x-axis, and `lifeExp` on the y-axis. You should also use `geom_point()` to see the actual data points and `geom_smooth(se = FALSE)` to plot the underlying trendlines. You need to remove the comments **\#** from the lines below for your code to run.
+First, create a plot of life expectancy over time for the single country you chose. 
 
 ```{r, lifeExp_one_country}
 plot1 <- ggplot(data = country_data, mapping = aes(x = year, y = lifeExp))+
@@ -65,16 +61,16 @@ Next we need to add a title. Create a new plot, or extend plot1, using the `labs
  plot1
 ```
 
-Secondly, produce a plot for all countries in the *continent* you come from. (Hint: map the `country` variable to the colour aesthetic. You also want to map `country` to the `group` aesthetic, so all points for each country are grouped together).
+Secondly, produce a plot for all countries in the *continent* you come from. 
 
 ```{r lifeExp_one_continent}
- ggplot(continent_data, mapping = aes(x = year  , y = lifeExp , colour= country  , group = country))+
+ ggplot(continent_data, mapping = aes(x = year  , y = lifeExp , colour= country , group = country))+
    geom_point() + 
    geom_smooth(se = FALSE) +
    NULL
 ```
 
-Finally, using the original `gapminder` data, produce a life expectancy over time graph, grouped (or faceted) by continent. We will remove all legends, adding the `theme(legend.position="none")` in the end of our ggplot.
+Finally, using the original `gapminder` data, produce a life expectancy over time graph, grouped (or faceted) by continent. 
 
 ```{r lifeExp_facet_by_continent}
  ggplot(data = gapminder , mapping = aes(x = year , y = lifeExp , colour= country))+
@@ -85,15 +81,14 @@ Finally, using the original `gapminder` data, produce a life expectancy over tim
    NULL
 ```
 
-Given these trends, what can you say about life expectancy since 1952? Again, don't just say what's happening in the graph. Tell some sort of story and speculate about the differences in the patterns.
-
-> Type your answer after this blockquote.
+Given these trends, what can you say about life expectancy since 1952? 
 
 -   As for China, the life expectancy since 1952 has showed a rapid increase from below 45 to over 70. The growth rate is smaller after 1975.And I observed that the life expectancy decreased in 1962 compared to 1957, which is against the trend. This is probably result from the famine in the 1960s in China.
 -   As for Asia,life expectancy varies greatly from country to country. Japan has the highest life expectancy which is over 80 now while Yeman has the lowest which is around 44 now. Most countries has risen rapidly since 1952 but Iraq showed a different trend because of war.
 -   As for the difference between continent, Europe, Americas and Oceania show a milder growth compared with Asia and Africa, which indicates the rapid development in quality of life in developing countries and areas in the past 70 years. The other point is that there are many countries in Africa that have experienced retrogression in life expectancy, which indicates these countries faced serious economic challenges.
 
-# Task 3: Brexit vote analysis
+
+# Task 2: Brexit vote analysis
 
 We will have a look at the results of the 2016 Brexit vote in the UK. First we read the data using `read_csv()` and have a quick glimpse at the data
 
@@ -140,10 +135,6 @@ brexit_results %>%
   cor()
 ```
 
-The correlation is almost 0.5, which shows that the two variables are positively correlated.
-
-We can also create a scatterplot between these two variables using `geom_point`. We also add the best fit line, using `geom_smooth(method = "lm")`.
-
 ```{r brexit_immigration_plot}
 r1<-ggplot(brexit_results, aes(x = born_in_uk, y = leave_share)) +
   geom_point(alpha=0.3) +
@@ -156,16 +147,10 @@ r1<-ggplot(brexit_results, aes(x = born_in_uk, y = leave_share)) +
   NULL
 r1+labs(title='The scatterplot of the proportion of native born residents and the tendency to vote for Brexit ',subtitle = 'scatterplot',x='the proportion of native born residents',y='the percetage of vote for Brexit')
 ```
+According to the scatterplot and the correlation which is 0.49, we can conclude that the proportion of native born residents in a constituency and its percentage of vote in favour of Brexit is *positively related*. In other words, the fear of immigration has *some kind of influence on* the result of Brexit. **But correlation is not equal to causality**. Thus, we can't come to conclusion that Brexit outcome result from fear of immigration and opposition to the EU's more open border policy. We still need more proof to examine this argument.*
 
-You have the code for the plots, I would like you to revisit all of them and use the `labs()` function to add an informative title, subtitle, and axes titles to all plots.
 
-What can you say about the relationship shown above? Again, don't just say what's happening in the graph. Tell some sort of story and speculate about the differences in the patterns.
-
-> Type your answer after, and outside, this blockquote.
-
-According to the scatterplot and the correlation which is 0.49, we can conclude that the proportion of native born residents in a constituency and its percentage of vote in favour of Brexit is *positively related*. In other words, the fear of immigration has *some kind of influence on* the result of Brexit. **But correlation is not equal to causality**. Thus, we can't come to conclusion that Brexit outcome result from fear of immigration and opposition to the EU's more open border policy. We still need more proof to examine this argument.
-
-# Task 4: Animal rescue incidents attended by the London Fire Brigade
+# Task 3: Animal rescue incidents attended by the London Fire Brigade
 
 [The London Fire Brigade](https://data.london.gov.uk/dataset/animal-rescue-incidents-attended-by-lfb) attends a range of non-fire incidents (which we call 'special services'). These 'special services' include assistance to animals that may be trapped or in distress. The data is provided from January 2009 and is updated monthly. A range of information is supplied for each incident including some location information (postcode, borough, ward), as well as the data/time of the incidents. We do not routinely record data about animal deaths or injuries.
 
@@ -182,7 +167,7 @@ animal_rescue <- read_csv(url,
 
 glimpse(animal_rescue)
 ```
-One of the more useful things one can do with any data set is quick counts, namely to see how many observations fall within one category. For instance, if we wanted to count the number of incidents by year, we would either use `group_by()... summarise()` or, simply [`count()`](https://dplyr.tidyverse.org/reference/count.html)
+
 
 ```{r, instances_by_calendar_year}
 
@@ -195,8 +180,7 @@ animal_rescue %>%
 
 ```
 
-Let us try to see how many incidents we have by animal group. Again, we can do this either using group_by() and summarise(), or by using count()
-
+Let us try to see how many incidents we have by animal group.
 ```{r, animal_group_percentages}
 animal_rescue %>% 
   group_by(animal_group_parent) %>% 
@@ -220,12 +204,8 @@ animal_rescue %>%
   count(animal_group_parent, name="count", sort=TRUE) %>% 
   mutate(percent = round(100*count/sum(count),2))
 
-
+#There are two animal groups both named cats.They should be comined together.
 ```
-
-Do you see anything strange in these tables? 
-
-Answer:There are two animal groups both named cats.They should be comined together.
 
 Finally, let us have a look at the notional cost for rescuing each of these animals. As the LFB says,
 
@@ -235,8 +215,6 @@ There is two things we will do:
 
 1. Calculate the mean and median `incident_notional_cost` for each `animal_group_parent`
 2. Plot a boxplot to get a feel for the distribution of `incident_notional_cost` by `animal_group_parent`.
-
-Before we go on, however, we need to fix `incident_notional_cost` as it is stored as a `chr`, or character, rather than a number.
 
 ```{r, parse_incident_cost,message=FALSE, warning=FALSE}
 
@@ -255,7 +233,6 @@ typeof(animal_rescue$incident_notional_cost)
 ```
 
 Now tht incident_notional_cost is numeric, let us quickly calculate summary statistics for each animal group. 
-
 
 ```{r, stats_on_incident_cost,message=FALSE, warning=FALSE}
 
@@ -281,16 +258,11 @@ animal_rescue %>%
 
 ```
 
+Except for squirrel,ferret and rabbit, median incident costs are much lower than the mean incident costs. This indicates that the distribution of the incident costs is generally positively skewed.
+The minimum of incident cost of dogs is zero while it is 255 or 260 in other animals' group. So this is an outlier.
 
-Compare the mean and the median for each animal group. waht do you think this is telling us?
-A:Except for squirrel,ferret and rabbit, median incident costs are much lower than the mean incident costs. This indicates that the distribution of the incident costs is generally positively skewed.
-
-Anything else that stands out? Any outliers?
-
-A:The minimum of incident cost of dogs is zero while it is 255 or 260 in other animals' group.So this is an outlier.
 
 Finally, let us plot a few plots that show the distribution of incident_cost for each animal group.
-
 ```{r, plots_on_incident_cost_by_animal_group,message=FALSE, warning=FALSE}
 
 # base_plot
@@ -310,8 +282,6 @@ base_plot + stat_ecdf(geom = "step", pad = FALSE) +
 
 
 ```
-
-Which of these four graphs do you think best communicates the variability of the `incident_notional_cost` values? Also, can you please tell some sort of story (which animals are more expensive to rescue than others, the spread of values) and speculate about the differences in the patterns.
 
 -   I think the boxplot best communicates the variability of the incident cost of different animal groups. 
 -   The graph shows that horses are the most expensive to rescue, with a range between 250-1000. This indicates that the time rounded up to the nearest hour spent by Pump, Aerial and FRU appliances at the incident of horse are the longest generally. 

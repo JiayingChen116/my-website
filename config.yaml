@@ -84,16 +84,16 @@ params:
         subtitle: Learn more about who I am.
         title: Biography
         url: aliquam
-      - image: purple.jpeg
+      - image: animalsave.png
         subtitle: My very first personal project based on R!
         title: Pre-Programme Project MAM 2022
         url: blogs/tempus
-      - image: vaxtrump.jpg
-        subtitle: In this project, I collaborated with five group members and conducted analytics on IBM HR data and Covid Vaccination V.S. Election Results. 
-        title: Project 1 Covid Vaccination V.S. Election Results
+      - image: hr.png
+        subtitle: In this project, I collaborated with five group members and conducted analytics on IBM HR data and look into how factors like education level and job title affect income. 
+        title: Project 1 IBM HR Analytics
         url: blogs/magna
-      - image: ferrate.png
-        subtitle: In this project, I mainly worked on worldbank data and investigated the correlation of GDP, fertility rate, life expectancy and education level in different countries throughout the world.
+      - image: worldbank.png
+        subtitle: In this project, I mainly worked on worldbank data and investigated the correlation of HIV prevalence, GDP, fertility rate and life expectancy in different countries throughout the world.
         title: Project 2 Insights on Worldbank Data 
         url: blogs/hwtwo
       - image: gdpback.jpeg
