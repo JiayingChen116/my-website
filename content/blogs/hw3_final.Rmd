@@ -1,14 +1,16 @@
 ---
-categories:
-- ""
-- ""
-date: "2017-10-31T21:28:43-05:00"
-description: In this project, I took the challenge to take a further look into how the percentage of GDP compositions change over time among different countries and gain insights about diversity of economy.
-draft: false
+title: "Project 3 GDP Global Comparison"
+date: '2017-10-31T21:28:43-05:00'
+description: In this project, I took the challenge to take a further look into how
+  the percentage of GDP compositions change over time among different countries and
+  gain insights about diversity of economy.
+draft: no
 image: gdpback.jpeg
-keywords: ""
+keywords: ''
 slug: ipsum
-title: Project 3 GDP Global Comparison 
+categories:
+- ''
+- ''
 ---
 
 *Author:Jiaying Chen, Yingjin He, Sabrina Seow, Kashish Solanki, Roman Vazquez Lorenzo, Maximilian Stock*

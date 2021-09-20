@@ -1,18 +1,19 @@
 ---
-categories:
-- ""
-- ""
-date: "2017-10-31T22:26:09-05:00"
-description: In this project, I collaborated with five group members and conducted analytics on IBM HR data and look into how factors like education level and job title affect income. 
-draft: false
-image: hr.png
-keywords: ""
+title: "Project 1 IBM HR Analytics"
+date: '2017-10-31T22:26:09-05:00'
+description: In this project, I collaborated with five group members and conducted
+  analytics on IBM HR data and look into how factors like education level and job
+  title affect income.
+draft: no
+image: hr2.png
+keywords: ''
 slug: magna
-title: Project 1 IBM HR Analytics
+categories:
+- ''
+- ''
 ---
 
 *Author:Jiaying Chen, Yingjin He, Sabrina Seow, Kashish Solanki, Roman Vazquez Lorenzo, Maximilian Stock*
-
 
 ```{r setup, warning = FALSE, echo=FALSE}
 knitr::opts_chunk$set(

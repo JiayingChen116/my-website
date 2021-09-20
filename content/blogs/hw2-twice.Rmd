@@ -1,14 +1,16 @@
 ---
-categories:
-- ""
-- ""
-date: "2017-10-31T22:26:09-06:00"
-description: In this project, I mainly worked on worldbank data and investigated the correlation of HIV prevalence, GDP, fertility rate and life expectancy in different countries throughout the world.
-draft: false
+title: "Project 2 Insights on Worldbank Data"
+date: '2017-10-31T22:26:09-06:00'
+description: In this project, I mainly worked on worldbank data and investigated the
+  correlation of HIV prevalence, GDP, fertility rate and life expectancy in different
+  countries throughout the world.
+draft: no
 image: worldbank.png
-keywords: ""
+keywords: ''
 slug: hwtwo
-title: Project 2 Insights on Worldbank Data 
+categories:
+- ''
+- ''
 ---
 
 *Author: Jiaying Chen*

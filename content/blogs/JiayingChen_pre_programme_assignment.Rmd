@@ -1,15 +1,17 @@
 ---
-categories:
-- ""
-- ""
-date: "2017-10-31T22:42:51-05:00"
-description: My very first personal project based on R! I accomplished three tasks about life expectancy, brexit note and animal rescue.
-draft: false
+title: "Pre-Programme Project MAM 2022"
+date: '2017-10-31T22:42:51-05:00'
+description: My very first personal project based on R! I accomplished three tasks
+  about life expectancy, brexit note and animal rescue.
+draft: no
 image: animalsave.png
-keywords: ""
+keywords: ''
 slug: tempus
-title: Pre-Programme Project MAM 2022
+categories:
+- ''
+- ''
 ---
+*Author: Jiaying Chen*
 
 ```{r load-libraries, warning=FALSE, message=FALSE, echo=FALSE}
 library(tidyverse)  # Load ggplot2, dplyr, and all the other tidyverse packages

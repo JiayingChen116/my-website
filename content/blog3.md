@@ -11,24 +11,30 @@ slug: aliquam
 title: About Me
 ---
 
-Hi, I am *Jiaying Chen*. I am from *Shanghai, China*. I graduated from the School of Economics of *Peking University*,majoring in Finance. Now I am reading for Masters in Analytics and Management degree in London Business School.
+Hi, I am *Jiaying Chen*. I am from *Shanghai, China*. I graduated from the School of Economics of *Peking University*, majoring in Finance. In 2019, I spend a wonderful time at University of Notre Dame in U.S. as an exchange student. Now I am reading for Masters in Analytics and Management degree in London Business School. 
 
 I would use three keywords to describe my characteristic:
 -   Curious
 -   Reliable
 -   Compassionate
 
-
 And here is my [Linkedin profile](https://www.linkedin.com/in/jiaying-chen-0934) where you can find more information about my past experience.
 
 
-In my spare time, I am fond of arts. And my favorite artist is Bato Dugarzhapov. Here is one of my favorite works.
+In my spare time, I am fond of arts. I have learned painting since my childhood. And my favorite artist is Bato Dugarzhapov. Here is one of my favorite works.
 
 
 ![Image caption](https://i.pinimg.com/originals/ae/a0/52/aea0528570933ed52efd390cb9836134.jpg)
 
+And here are some of my own works of oil painting.
+
+![Image caption](/images/brexit.png)
 
 
 
-I also enjoy playing sports with my friends. Fencing and squash are my favorites.
+
+
+I am a traveler, photographer and dancer! I also enjoy playing sports with my friends. Fencing, archery and squash are my favorites.
+
+
 
